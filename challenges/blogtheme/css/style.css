@@ -1,0 +1,385 @@
+body
+{
+  font-family: 'Lato', sans-serif;
+}
+
+nav ul
+{
+  font-size: 18px;
+
+  float: right;
+
+  margin-bottom: 30px;
+}
+
+nav ul li
+{
+  line-height: 44px;
+
+  display: inline-block;
+
+  color: #47525e;
+}
+
+nav ul li:nth-child(1)
+{
+  margin-right: 43px;
+}
+
+nav ul li:nth-child(2)
+{
+  margin-right: 36px;
+}
+
+nav ul li:nth-child(3)
+{
+  margin-right: 33px;
+}
+
+nav ul li:nth-child(4)
+{
+  margin-right: 30px;
+}
+
+nav ul li:nth-child(5)
+{
+  margin-right: 29px;
+}
+
+nav ul li:nth-child(6)
+{
+  margin: 0;
+  margin-top: 1px;
+  margin-right: 65px;
+
+  vertical-align: middle;
+}
+
+nav ul li:nth-child(6) img
+{
+  width: 18px;
+  height: 18px;
+
+  background-color: rgba(255, 255, 255, 0);
+}
+
+header
+{
+  display: flex;
+  clear: both;
+
+  padding: 3px 0;
+
+  background-color: #f2f2f2;
+}
+
+header figure
+{
+  height: auto;
+}
+
+header figure:nth-child(1)
+{
+  margin-left: 130px;
+}
+
+header figure:nth-child(2)
+{
+  margin-left: 10px;
+}
+
+header figure:nth-child(3)
+{
+  margin-left: 19px;
+}
+
+header figure:nth-child(1) img
+{
+  height: 216px;
+  margin-top: 3px;
+}
+
+header figure:nth-child(2) img
+{
+  height: 219px;
+}
+
+header figure:nth-child(3) img
+{
+  height: 225px;
+  margin-top: -2px;
+}
+
+header figure figcaption
+{
+  font-size: 12px;
+  font-weight: 300;
+
+  position: relative;
+
+  width: 134px;
+  padding: 26px 0 32px;
+
+  text-align: center;
+
+  color: #47525e;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+
+header figure:nth-child(1) figcaption
+{
+  top: -47px;
+  left: 96px;
+
+  padding-bottom: 38px;
+}
+
+header figure:nth-child(2) figcaption
+{
+  top: -49px;
+  left: 140px;
+}
+
+header figure:nth-child(3) figcaption
+{
+  top: -55px;
+  left: 102px;
+
+  padding-top: 32px;
+}
+
+header figure figcaption::after
+{
+  display: block;
+
+  width: 70px;
+  height: .5em;
+  margin: 0 auto;
+
+  content: '';
+
+  border-top: 2px solid black;
+}
+
+header figure:nth-child(1) figcaption::after
+{
+  margin-top: 6px;
+}
+
+header figure:nth-child(2) figcaption::after
+{
+  margin-top: 10px;
+}
+
+header figure:nth-child(3) figcaption::after
+{
+  margin-top: 8px;
+}
+
+section
+{
+  overflow: overlay;
+
+  margin-top: -20px;
+  margin-bottom: 47px;
+  padding-left: 7.5%;
+}
+
+section article
+{
+  float: left;
+
+  width: 44%;
+  padding: 0 8%;
+  padding-bottom: 9px;
+
+  background-color: #f6f6f7;
+}
+
+section article h1
+{
+  font-size: 15px;
+  line-height: 19px;
+
+  margin-top: 33px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000;
+}
+
+section article img
+{
+  width: 92%;
+  height: auto;
+  margin-top: 7px;
+}
+
+section article p
+{
+  font-size: 16px;
+  line-height: 1.26em;
+
+  width: 98%;
+  margin-top: 43px;
+
+  text-align: left;
+
+  color: #47525e;
+}
+
+section article p:last-child
+{
+  margin-top: 18px;
+}
+
+section article div
+{
+  text-align: center;
+}
+
+aside
+{
+  float: left;
+
+  width: 30%;
+  padding-left: 9%;
+
+  text-align: center;
+}
+
+aside h2
+{
+  font-size: 16px;
+}
+
+aside h2::after
+{
+  display: block;
+
+  width: 119px;
+  height: .5em;
+  margin: 0 auto;
+  margin-top: 8px;
+
+  content: '';
+
+  border-top: 2px solid black;
+}
+
+aside img
+{
+  width: 35%;
+  margin-top: -6px;
+}
+
+aside div:first-child
+{
+  margin-top: 24px;
+}
+
+aside div:last-child
+{
+  margin-top: 58px;
+  padding-left: 3%;
+}
+
+aside p
+{
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+
+  width: 56%;
+  margin-top: 24px;
+  padding-left: 26%;
+
+  text-align: left;
+
+  color: #47525e;
+}
+
+aside p span
+{
+  display: block;
+}
+
+aside div:last-child h2::after
+{
+  margin-bottom: -5px;
+}
+
+aside div:last-child input
+{
+  display: block;
+}
+
+form
+{
+  width: 182px;
+  margin-left: 27%;
+}
+
+form input:first-child
+{
+  font-size: 17px;
+
+  width: 95%;
+  height: 33px;
+  padding-left: 12px;
+
+  border: 1px solid #47525e;
+  border-radius: 5px;
+  outline: none;
+}
+
+form textarea
+{
+  font-size: 17px;
+
+  width: 96%;
+  height: 107px;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  padding: 21px 0 0 11px;
+
+  border: 1px solid #47525e;
+  border-radius: 5px;
+  outline: none;
+}
+
+form input[type=submit]
+{
+  font-size: 18px;
+
+  width: 102%;
+  padding: 14px 0;
+
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  background-color: #47525e;
+}
+
+footer
+{
+  font-size: 18px;
+
+  margin-top: 11px;
+  padding: 77px 0;
+
+  text-align: center;
+
+  color: #fff;
+  background-color: #47525e;
+}
+
+footer p span
+{
+  display: inline-block;
+
+  margin-right: 46px;
+  margin-left: 19px;
+}
