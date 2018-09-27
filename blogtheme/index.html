@@ -1,42 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>BlogTheme</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <nav>
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Features</li>
-      <li>Pricing</li>
-      <li>Contact us</li>
-      <li><img src="images/magnifier.png" alt=""></li>
+  <nav role="navigation">
+    <ul role="menubar">
+      <li role="menuitem">
+        <a href="#" tabindex="1">Home</a></li>
+      <li role="menuitem">
+        <a href="#" tabindex="2">About</a></li>
+      <li role="menuitem">
+        <a href="#" tabindex="3">Features</a></li>
+      <li role="menuitem">
+        <a href="#" tabindex="4">Pricing</a></li>
+      <li role="menuitem">
+        <a href="#" tabindex="5">Contact us</a></li>
+      <li role="menuitem">
+        <a href="#" tabindex="6"><img src="images/magnifier.png" alt="Search icon"></a></li>
     </ul>
   </nav>
-  <header>
+  <header role="banner">
     <figure>
-      <img src="images/sf-image.jpg">
+      <img src="images/sf-image.jpg" alt="San Franciso Bridge">
       <figcaption>My best place</figcaption>
     </figure>
     <figure>
-      <img src="images/fuits-image.jpg">
+      <img src="images/fuits-image.jpg" alt="Vegetables Picture">
       <figcaption>My fav Food</figcaption>
     </figure>
     <figure>
-      <img src="images/place-image.jpg">
+      <img src="images/place-image.jpg" alt="City landscape at the afternoon">
       <figcaption>My fav Season</figcaption>
     </figure>
   </header>
   <section>
-    <article>
+    <article role="article">
         <h1>My trip to Amsterdam</h1>
         <div>
-            <img src="images/blog-image.jpg" alt="">
+          <img src="images/blog-image.jpg" alt="Amsterdam village">
         </div>
         
         <p>
@@ -53,11 +58,11 @@
           and after almost a year of working solidly, a week away was so appealing.
         </p>
       </article>
-      <aside>
+      <aside role="complementary">
         <div>
           <h2>About Me</h2>
           <div>
-            <img src="images/autor-image.jpeg" alt="">
+            <img src="images/autor-image.jpeg" alt="A picture of me">
           </div>
           <p>
             <span>Hi.</span>
@@ -68,15 +73,15 @@
         </div>
         <div>
           <h2>Contact Me</h2>
-          <form>
-            <input type="text" placeholder="Type your email">
-            <textarea name="textarea" placeholder="Text ..."></textarea>
+          <form role="form">
+            <input type="text" placeholder="Type your email" aria-labelledby="Write your email">
+            <textarea name="textarea" placeholder="Text ..." aria-labelledby="Write your message"></textarea>
             <input type="submit" value="Submit">
           </form>
         </div>
       </aside>
   </section>
-  <footer>
+  <footer role="contentinfo">
     <p>Develop by: <span>Carla W.</span></p>
   </footer>
 </body>

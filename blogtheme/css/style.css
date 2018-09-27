@@ -24,6 +24,11 @@ nav ul li
   color: #47525e;
 }
 
+a {
+  text-decoration: none;
+  color: #47525e;
+}
+
 nav ul li:nth-child(1)
 {
   margin-right: 43px;
