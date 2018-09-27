@@ -1,20 +1,23 @@
 body
 {
   font-family: 'Lato', sans-serif;
+
+  margin: 0;
+  padding: 0;
 }
 
 nav ul
 {
-  font-size: 18px;
+  font-size: 1.125em;
 
   float: right;
 
-  margin-bottom: 30px;
+  margin-bottom: 21px;
 }
 
 nav ul li
 {
-  line-height: 44px;
+  line-height: 61px;
 
   display: inline-block;
 
@@ -33,7 +36,7 @@ nav ul li:nth-child(2)
 
 nav ul li:nth-child(3)
 {
-  margin-right: 33px;
+  margin-right: 32px;
 }
 
 nav ul li:nth-child(4)
@@ -48,9 +51,8 @@ nav ul li:nth-child(5)
 
 nav ul li:nth-child(6)
 {
-  margin: 0;
-  margin-top: 1px;
-  margin-right: 65px;
+  margin-right: 75px;
+  margin-bottom: -1px;
 
   vertical-align: middle;
 }
@@ -68,51 +70,41 @@ header
   display: flex;
   clear: both;
 
-  padding: 3px 0;
+  padding: 0;
+  padding: 0 30px;
 
   background-color: #f2f2f2;
+
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 header figure
 {
-  height: auto;
-}
-
-header figure:nth-child(1)
-{
-  margin-left: 130px;
-}
-
-header figure:nth-child(2)
-{
-  margin-left: 10px;
-}
-
-header figure:nth-child(3)
-{
-  margin-left: 19px;
+  height: 266px;
+  margin: 20px 10px;
 }
 
 header figure:nth-child(1) img
 {
-  height: 216px;
-  margin-top: 3px;
+  height: 81%;
+  margin-top: 4px;
 }
 
 header figure:nth-child(2) img
 {
-  height: 219px;
+  height: 83%;
 }
 
 header figure:nth-child(3) img
 {
-  height: 225px;
-  margin-top: -2px;
+  height: 84%;
+  margin-top: -1px;
 }
 
 header figure figcaption
 {
-  font-size: 12px;
+  font-size: .750em;
   font-weight: 300;
 
   position: relative;
@@ -159,7 +151,7 @@ header figure figcaption::after
 
   content: '';
 
-  border-top: 2px solid black;
+  border-top: 2px solid #47525e;
 }
 
 header figure:nth-child(1) figcaption::after
@@ -179,18 +171,17 @@ header figure:nth-child(3) figcaption::after
 
 section
 {
-  overflow: overlay;
+  overflow: hidden;
 
-  margin-top: -20px;
-  margin-bottom: 47px;
-  padding-left: 7.5%;
+  margin-top: 51px;
+  padding-left: 10%;
 }
 
 section article
 {
   float: left;
 
-  width: 44%;
+  width: 45%;
   padding: 0 8%;
   padding-bottom: 9px;
 
@@ -200,26 +191,26 @@ section article
 section article h1
 {
   font-size: 15px;
-  line-height: 19px;
+  line-height: 18px;
 
-  margin-top: 33px;
+  margin-top: 35px;
 
   text-align: center;
   text-transform: uppercase;
 
-  color: #000;
+  color: #47525e;
 }
 
 section article img
 {
-  width: 92%;
+  width: 90%;
   height: auto;
-  margin-top: 7px;
+  margin-top: 8px;
 }
 
 section article p
 {
-  font-size: 16px;
+  font-size: 1em;
   line-height: 1.26em;
 
   width: 98%;
@@ -252,7 +243,9 @@ aside
 
 aside h2
 {
-  font-size: 16px;
+  font-size: 1em;
+
+  color: #47525e;
 }
 
 aside h2::after
@@ -266,7 +259,7 @@ aside h2::after
 
   content: '';
 
-  border-top: 2px solid black;
+  border-top: 2px solid #47525e;
 }
 
 aside img
@@ -283,18 +276,17 @@ aside div:first-child
 aside div:last-child
 {
   margin-top: 58px;
-  padding-left: 3%;
 }
 
 aside p
 {
-  font-size: 12px;
+  font-size: .750em;
   font-weight: 400;
   line-height: 15px;
 
   width: 56%;
   margin-top: 24px;
-  padding-left: 26%;
+  padding: 0 26%;
 
   text-align: left;
 
@@ -319,7 +311,7 @@ aside div:last-child input
 form
 {
   width: 182px;
-  margin-left: 27%;
+  margin: 0 auto;
 }
 
 form input:first-child
@@ -352,7 +344,7 @@ form textarea
 
 form input[type=submit]
 {
-  font-size: 18px;
+  font-size: 1.125em;
 
   width: 102%;
   padding: 14px 0;
@@ -365,10 +357,12 @@ form input[type=submit]
 
 footer
 {
-  font-size: 18px;
+  font-size: 1.125em;
 
-  margin-top: 11px;
-  padding: 77px 0;
+  clear: both;
+
+  margin-top: 50px;
+  padding: 88px 0 95px 0;
 
   text-align: center;
 
@@ -380,6 +374,14 @@ footer p span
 {
   display: inline-block;
 
-  margin-right: 46px;
   margin-left: 19px;
+}
+
+@media (max-width: 968px)
+{
+  section article,
+  section aside
+  {
+    width: 75%;
+  }
 }
