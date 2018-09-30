@@ -1,0 +1,130 @@
+.orange
+{
+  background-color: #e76022;
+}
+
+.blue
+{
+  background-color: #00bcd4;
+}
+
+.red
+{
+  background-color: #da312e;
+}
+
+.green
+{
+  background-color: #61b812;
+}
+
+.yellow
+{
+  background-color: #f1d445;
+}
+
+body
+{
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+
+.main
+{
+  height: 100vh;
+
+  background-image: url(https://wallpaperset.com/w/full/e/8/7/389750.jpg);
+}
+
+.square
+{
+  width: 165px;
+  height: 165px;
+  margin: 2px;
+}
+
+.rectangle
+{
+  width: 330px;
+  height: 165px;
+  margin: 2px;
+}
+
+.rectangle:last-child
+{
+  width: 326px;
+
+  background: white;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBxkKU5nAwXRBXkyQIUL4R_CN9hR1jpwmf4S7MUcTrw92-nWhb);
+  background-size: 100%;
+}
+
+.menu--container
+{
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.menu--left,
+.menu--right
+{
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+}
+
+.menu--left
+{
+  width: 60%;
+}
+
+.menu--right
+{
+  width: 24%;
+}
+
+.header--profile
+{
+  width: 60px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.header--username,
+.header--location
+{
+  margin: 0;
+}
+
+.header--container
+{
+  display: flex;
+  flex-direction: row;
+
+  margin: 0 80px;
+
+  color: #fff;
+
+  justify-content: space-between;
+}
+
+.nav--container
+{
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.header--title
+{
+  font-size: 3em;
+  font-weight: 100;
+
+  letter-spacing: 2px;
+}
