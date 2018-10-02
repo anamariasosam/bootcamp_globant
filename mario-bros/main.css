@@ -1,68 +1,328 @@
-/*Basic page reset styles*/
-* {
+*
+{
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
-body {
+body
+{
   overflow: hidden;
 }
 
-/*
-  this is the font family that you need to use: font-family: 'Press Start 2P', cursive;
-*/
-.scene {
-  background-color: #5a8df6;
-  width: 100vw;
-  height: 100vh;
+.scene
+{
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #5a8df6;
+
+  justify-content: space-between;
 }
 
-.floor {
-  height: 8vh;
-  background-image: url('images/floorTexture.png')
+.floor
+{
+  height: 54px;
+
+  background-image: url('images/floorTexture.png');
 }
 
-.cloud {
+.cloud
+{
+  position: absolute;
+
   height: 80px;
+
   background-repeat: no-repeat;
   background-size: contain;
-  position: absolute; 
-  top: 20%;
 }
 
-.single {
-  background-image: url('images/cloud1.png');
-  min-width: 80px;
+.single
+{
+  top: 14%;
+
+  min-width: 95px;
+
   animation: cloud_single 20s linear infinite;
+
+  background-image: url(images/cloud1.png);
 }
 
-.double {
-  background-image: url('images/cloud2.png');
+.double
+{
+  top: 20%;
+
   min-width: 240px;
+
+  background-image: url('images/cloud2.png');
 }
 
-.double:first-child {
+.double:first-child
+{
   animation: cloud_double 15s linear infinite backwards;
 }
 
-.double:last-child {
+.double:last-child
+{
   animation: cloud_double 20s 5s linear infinite backwards;
 }
 
-@keyframes cloud_single {
-  0% { transform: translateX(50vw) }
-  50% { transform: translateX(-80px); opacity: 1 }
-  51% { transform: translateX(-80px); opacity: 0 }
-  52% { transform: translateX(100vw); opacity: 0 }
-  53% { opacity: 1 }
-  100% { transform: translateX(50vw) }
+@keyframes cloud_single
+{
+  0%
+  {
+    transform: translateX(50vw);
+  }
+  50%
+  {
+    transform: translateX(-80px); opacity: 1;
+  }
+  51%
+  {
+    transform: translateX(-80px); opacity: 0;
+  }
+  52%
+  {
+    transform: translateX(100vw); opacity: 0;
+  }
+  53%
+  {
+    opacity: 1;
+  }
+  100%
+  {
+    transform: translateX(50vw);
+  }
 }
 
-@keyframes cloud_double {
-  from { transform: translateX(100vw) }
-  to { transform: translateX(-240px) }
+@keyframes cloud_double
+{
+  from
+  {
+    transform: translateX(100vw);
+  }
+  to
+  {
+    transform: translateX(-240px);
+  }
+}
+
+.info
+{
+  font-family: 'Press Start 2P', cursive;
+  font-size: .7em;
+
+  display: flex;
+  flex-direction: row;
+
+  text-transform: uppercase;
+
+  color: #fff;
+
+  justify-content: space-around;
+}
+
+.coins-image
+{
+  height: 22px;
+}
+
+.coins p
+{
+  display: inline-block;
+
+  margin-left: -8px;
+}
+
+.init-game
+{
+  margin-top: 30px;
+}
+
+.world,
+.time
+{
+  text-align: center;
+}
+
+.mario-figure
+{
+  position: absolute;
+  z-index: 1;
+
+  width: 50px;
+
+  animation: mario 15s linear infinite;
+}
+
+@keyframes mario
+{
+  0%
+  {
+    bottom: 54px;
+    left: 0;
+  }
+  41%
+  {
+    bottom: 54px;
+    left: 40%;
+  }
+  42%
+  {
+    bottom: 180px;
+  }
+  45%
+  {
+    bottom: 54px;
+    left: 45%;
+  }
+  71%
+  {
+    bottom: 54px;
+    left: 80%;
+  }
+  72%
+  {
+    bottom: 154px;
+  }
+  75%
+  {
+    bottom: 144px;
+    left: 85%;
+  }
+  85%
+  {
+    bottom: 144px;
+    left: 95%;
+  }
+  90%
+  {
+    bottom: 54px;
+    left: 100%;
+  }
+  100%
+  {
+    bottom: 54px;
+    left: 100%;
+  }
+}
+
+.pipe
+{
+  position: absolute;
+  right: 5%;
+  bottom: 54px;
+
+  width: 90px;
+}
+
+.block
+{
+  position: absolute;
+  right: 57%;
+  bottom: 33%;
+
+  width: 46px;
+}
+
+.block:hover
+{
+  bottom: 34%;
+}
+
+.up
+{
+  top: 33%;
+  right: 31%;
+}
+
+.up:hover
+{
+  top: 32%;
+}
+
+.blocks
+{
+  position: absolute;
+  right: 22%;
+  bottom: 33%;
+
+  width: 228px;
+}
+
+.mushroom
+{
+  position: absolute;
+  z-index: 1;
+  bottom: 144px;
+
+  height: 45px;
+
+  animation: mushroom 15s linear infinite;
+}
+
+@keyframes mushroom
+{
+  0%
+  {
+    right: 12%;
+    bottom: 144px;
+
+    transform: rotate(0);
+  }
+  5%
+  {
+    bottom: 54px;
+  }
+  44%
+  {
+    bottom: 54px;
+
+    transform: rotate(0);
+  }
+  45%
+  {
+    bottom: -25px;
+
+    transform: rotate(-45deg);
+  }
+  46%
+  {
+    bottom: -25px;
+
+    transform: rotate(-50deg);
+  }
+  47%
+  {
+    bottom: -45px;
+
+    transform: rotate(-50deg);
+  }
+  100%
+  {
+    right: 100%;
+    bottom: -45px;
+  }
+}
+
+.bush
+{
+  position: absolute;
+  bottom: 54px;
+  left: 30%;
+
+  width: 200px;
+}
+
+.hill
+{
+  position: absolute;
+  bottom: 54px;
+  left: 50%;
+
+  width: 170px;
 }
