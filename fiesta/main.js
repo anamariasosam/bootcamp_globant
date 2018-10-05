@@ -1,26 +1,15 @@
-var nombre = 'Ana'
-console.log('hola ' + nombre + ' 🐹')
-console.log(typeof nombre)
+var reproducirCancion = function (e) {
+  var audio = document.querySelector('#audio' + e.keyCode)
+  var teclita = document.querySelector("#teclita" + e.keyCode)
+  if (audio) {
+    teclita.style.color = 'red'
+    audio.currentTime = 10
+    audio.play();
 
-var edades = [20, 22]
-
-var yo = {
-  nombre: nombre,
-  apellido: 'Sosa'
+    setTimeout( function () {
+      teclita.style.color = 'black'
+    }, 500);
+  }
 }
 
-function saludar(nombre) {
-  return "Hola " + nombre
-}
-
-var saludo = saludar(yo.nombre)
-console.log(saludo)
-
-
-var a = 10
-var b = a
-a = 20
-console.log(b)
-
-
-document.querySelector("#estamosMelos").style.color = 'red'
+document.addEventListener('keydown', reproducirCancion)
