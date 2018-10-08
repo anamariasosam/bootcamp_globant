@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: black;
+}
+
+.main {
+    margin: 40px 20px;
+    padding: 0;
+
+    text-align: center;
+}
+
+.headline {
+    color: #fff;
+}
+
+.headline h1 {
+    font-family: 'Bungee Shade', cursive;
+
+    letter-spacing: 3px;
+}
+
+.headline p {
+    font-family: 'Verdana';
+}
+
+.balloon-container {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.balloon {
+    position: relative;
+
+    width: 130px;
+    height: 145px;
+    margin: 5px 20px;
+
+    border-radius: 60%;
+    box-shadow: inset -10px -10px 16px 0 rgba(0, 0, 0, .07);
+}
+
+.balloon:before {
+    font-size: 20px;
+
+    position: absolute;
+    bottom: -18px;
+
+    display: block;
+
+    width: 100%;
+
+    content: '▲';
+    text-align: center;
+}
+
+.balloon:after {
+    position: absolute;
+    top: 157px;
+
+    display: inline-block;
+
+    width: 1px;
+    height: 140px;
+    margin: 0 auto;
+
+    content: '';
+
+    background: rgba(255, 255, 255, .2);
+}
+
+.blow {
+    animation: blow 1s ease-in-out infinite;
+
+    box-shadow: 0 0 30px white, inset -10px -10px 16px 0 rgba(0, 0, 0, .07);
+}
+
+@keyframes blow {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+    50% {
+        transform: translateY(-25px) rotate(5deg);
+    }
+}
+
+@media (min-width: 535px) and (max-width: 735px) {
+    .balloon {
+        width: 80px;
+        height: 90px;
+    }
+    .balloon:before {
+        font-size: 16px;
+
+        bottom: -15px;
+    }
+    .balloon:after {
+        top: 100px;
+
+        height: 90px;
+    }
+}
+
+@media (max-width: 534px) {
+    .balloon {
+        animation: blow 4s ease-in-out infinite;
+
+        box-shadow: 0 0 30px white, inset -10px -10px 16px 0 rgba(0, 0, 0, .07);
+    }
+
+    .balloon-container:first-of-type,
+    .headline {
+        display: none;
+    }
+}
+
+#balloon49,
+#balloon55 {
+    background-color: #faff42;
+}
+
+#balloon49:before,
+#balloon55:before {
+    color: #faff42;
+}
+
+#balloon50,
+#balloon56 {
+    background-color: #fb5607;
+}
+
+#balloon50:before,
+#balloon56:before {
+    color: #fb5607;
+}
+
+#balloon51,
+#balloon57 {
+    background-color: #ff2f8b;
+}
+
+#balloon51:before,
+#balloon57:before {
+    color: #ff2f8b;
+}
+
+#balloon52,
+#balloon48 {
+    background-color: #8338ec;
+}
+
+#balloon52:before,
+#balloon48:before {
+    color: #8338ec;
+}
+
+#balloon53 {
+    background-color: #008bf8;
+}
+
+#balloon53:before {
+    color: #008bf8;
+}
+
+#balloon54 {
+    background-color: #89fc00;
+}
+
+#balloon54:before {
+    color: #89fc00;
+}
