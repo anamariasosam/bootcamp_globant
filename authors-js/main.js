@@ -12,22 +12,24 @@ authorsData.then((data) => {
 	const authors = data.results;
 
 	authors.forEach(author => {
-		const name = author.name.first + ' ' + author.name.last
+		const name = `${author.name.first} ${author.name.last}`
 		const image = author.picture.large
 		const email = author.email
+		const authorData = { name, image, email }
 
-		const article = createArticle(name, image, email)
+		const article = createArticle(authorData)
 
 		article.addEventListener('click', () => {
-			removeFromList(email)
-			addToFavorites(name, image, email)
+			removeAuthorFromList(email)
+			addAuthorToFavorites(authorData)
 		})
 
 		section.append(article)
 	})
 })
 
-createArticle = (name, image, email) => {
+createArticle = (author) => {
+	const { name, image, email } = author
 	const article = document.createElement('article')
 	const figure = document.createElement('figure')
 	const figcaption = document.createElement('figcaption')
@@ -45,32 +47,36 @@ createArticle = (name, image, email) => {
 	return article
 }
 
-addToList = (name, image, email) => {
+addToOriginalList = (author) => {
+	const { name, image, email } = author
+
 	const section = document.querySelector('section')
 	const article = createArticle(name, image, email)
 
 	article.addEventListener('click', () => {
-		removeFromList(email)
-		addToFavorites(name, image, email)
+		removeAuthorFromList(email)
+		addAuthorToFavorites(name, image, email)
 	})
 
 	section.append(article)
 }
 
-addToFavorites = (name, image, email) => {
+addAuthorToFavorites = (author) => {
+	const { name, image, email } = author
+
 	const aside = document.querySelector('aside')
 
-	const article = createArticle(name, image, email)
+	const article = createArticle(author)
 
 	article.addEventListener('click', () => {
-		removeFromList(email)
-		addToList(name, image, email)
+		removeAuthorFromList(email)
+		addToOriginalList(author)
 	})
 	
 	aside.append(article)
 }
 
-removeFromList = (email) => {
+removeAuthorFromList = (email) => {
 	var node = document.getElementById(email);
 	node.remove()
 }
