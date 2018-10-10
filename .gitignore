@@ -1,0 +1,4 @@
+node_modules
+authors-js/.eslintrc.js
+authors-js/package.json
+authors-js/package-lock.json
