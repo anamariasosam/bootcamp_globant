@@ -4,32 +4,73 @@ let authorsData = request
 	.then((res) => { 
 		return res.json()
 	}).catch((err) => {
-		console.log('ups', err)
+		console.log("ups", err)
 	})
 
 authorsData.then((data) => {
-	const section = document.querySelector('section')
+	const section = document.querySelector("section")
 	const authors = data.results;
 
 	authors.forEach(author => {
-		const article = document.createElement('article')
-		const figure = document.createElement('figure')
-		const figcaption = document.createElement('figcaption')
-		const img = document.createElement('img')
+		const name = author.name.first + " " + author.name.last
+		const image = author.picture.large
+		const email = author.email
 
-		figcaption.innerHTML = author.name.first + ' ' + author.name.last
-		img.src = author.picture.large
+		const article = createArticle(name, image, email)
 
-		figure.append(img)
-		figure.append(figcaption)
-
-		article.setAttribute("id", author.name.first);
-		article.append(figure)
+		article.addEventListener("click", () => {
+			removeFromList(email)
+			addToFavorites(name, image, email)
+		})
 
 		section.append(article)
-
-		article.addEventListener('click', (e) => {
-			console.log(e)
-		})
 	})
 })
+
+createArticle = (name, image, email) => {
+	const article = document.createElement("article")
+	const figure = document.createElement("figure")
+	const figcaption = document.createElement("figcaption")
+	const img = document.createElement("img")
+
+	figcaption.innerHTML = name
+	img.src = image
+
+	figure.append(img)
+	figure.append(figcaption)
+
+	article.setAttribute("id", email)
+	article.append(figure)
+
+	return article
+}
+
+addToList = (name, image, email) => {
+	const section = document.querySelector('section')
+	const article = createArticle(name, image, email)
+
+	article.addEventListener("click", () => {
+		removeFromList(email)
+		addToFavorites(name, image, email)
+	})
+
+	section.append(article)
+}
+
+addToFavorites = (name, image, email) => {
+	const aside = document.querySelector("aside")
+
+	const article = createArticle(name, image, email)
+
+	article.addEventListener("click", () => {
+		removeFromList(email)
+		addToList(name, image, email)
+	})
+	
+	aside.append(article)
+}
+
+removeFromList = (email) => {
+	var node = document.getElementById(email);
+	node.remove()
+}
