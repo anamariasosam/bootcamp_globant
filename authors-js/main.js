@@ -51,11 +51,11 @@ addToOriginalList = (author) => {
 	const { name, image, email } = author
 
 	const section = document.querySelector('section')
-	const article = createArticle(name, image, email)
+	const article = createArticle(author)
 
 	article.addEventListener('click', () => {
 		removeAuthorFromList(email)
-		addAuthorToFavorites(name, image, email)
+		addAuthorToFavorites(author)
 	})
 
 	section.append(article)
