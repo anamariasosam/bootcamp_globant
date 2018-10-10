@@ -12,10 +12,12 @@ authorsData.then((data) => {
 	const authors = data.results;
 
 	authors.forEach(author => {
+		console.log(author)
 		const name = `${author.name.first} ${author.name.last}`
 		const image = author.picture.large
 		const email = author.email
-		const authorData = { name, image, email }
+		const location = `${author.location.city}, ${author.location.state}`
+		const authorData = { name, image, email, location }
 
 		const article = createArticle(authorData)
 
@@ -29,16 +31,21 @@ authorsData.then((data) => {
 })
 
 createArticle = (author) => {
-	const { name, image, email } = author
+	const { name, image, email, location } = author
 	const article = document.createElement('article')
 	const figure = document.createElement('figure')
+	const authorName = document.createElement('p')
+	const authorLocation = document.createElement('p')
 	const figcaption = document.createElement('figcaption')
-	const img = document.createElement('img')
+	const authorImg = document.createElement('img')
 
-	figcaption.innerHTML = name
-	img.src = image
+	authorName.innerHTML = name
+	authorLocation.innerHTML = location
+	authorImg.src = image
 
-	figure.append(img)
+	figcaption.append(authorName)
+	figcaption.append(authorLocation)
+	figure.append(authorImg)
 	figure.append(figcaption)
 
 	article.setAttribute('id', email)
@@ -48,7 +55,7 @@ createArticle = (author) => {
 }
 
 addToOriginalList = (author) => {
-	const { name, image, email } = author
+	const { name, image, email, location } = author
 
 	const section = document.querySelector('section')
 	const article = createArticle(author)
@@ -62,7 +69,7 @@ addToOriginalList = (author) => {
 }
 
 addAuthorToFavorites = (author) => {
-	const { name, image, email } = author
+	const { name, image, email, location } = author
 
 	const aside = document.querySelector('aside')
 
@@ -77,6 +84,6 @@ addAuthorToFavorites = (author) => {
 }
 
 removeAuthorFromList = (email) => {
-	var node = document.getElementById(email);
-	node.remove()
+	var article = document.getElementById(email);
+	article.remove()
 }
