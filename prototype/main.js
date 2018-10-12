@@ -32,13 +32,17 @@ console.log(me2.introduceAbout())
 
 
 class PersonClass {
-	constructor(name, gender) {
+	constructor(name, age) {
 		this.name = name
-		this.gender = gender
+		this.age = age
 	}
 
 	introduce() {
 		return `Hola ${this.name}`
+	}
+
+	get dob() {
+		return 2018 - this.age
 	}
 }
 
@@ -46,16 +50,20 @@ var me3 = new PersonClass('Luis', 'P')
 console.log(me3.introduce())
 
 class DeveloperClass extends PersonClass {
-	constructor(name, gender, yearsOFExperience) {
-		super(name, gender)
+	constructor(name, age, yearsOFExperience) {
+		super(name, age)
 		this.yearsOFExperience = yearsOFExperience
 	}
 
 	introduceAbout() {
 		return `${this.name} tiene ${this.yearsOFExperience} años de experiencia`
 	}
+
+	nacimiento() {
+		return `${this.name} nació en ${this.dob}`
+	}
 }
 
-var me4 = new DeveloperClass('Tio Mac Pato', 'P', 4)
-console.log(me4.introduceAbout())
+var me4 = new DeveloperClass('Tio Mac Pato', 22, 4)
+console.log(me4.nacimiento())
 
