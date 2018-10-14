@@ -1,12 +1,14 @@
 .main {
-  max-width: 320px;
+  max-width: 342px;
   margin: 0 auto;
 }
 
 .buttons {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+	flex-wrap: wrap;
+	background-color: black;
+	padding: 4px 3px;
 }
 
 .buttons div {
@@ -17,13 +19,23 @@
   color: white;
   font-family: 'Verdana';
 	font-size: 40px;
-	border: 1px solid #ccc;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	border-radius: 50px;
+	margin: 3px;
 }
 
 .result {
-  width: 320px;
-  height: 178px;
-  background: black;
+  width: 342px;
+	height: 178px;
+	background: black;
+	color: #fff;
+	font-family: 'Verdana';
+	font-size: 80px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
 }
 
 .buttons div:nth-child(4n),
