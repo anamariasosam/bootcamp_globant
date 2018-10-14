@@ -1,5 +1,105 @@
-.App {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  text-align: center;
+
+  color: #fff;
+}
+
+h1 {
+  font-family: 'Acme', sans-serif;
+
+  margin: 20px auto;
+}
+
+p {
+  margin: 0;
+
+  color: #fff;
+}
+
+article {
+  margin: 15px;
+  padding: 1px;
+
+	border-radius: 10px;
+	position: relative;
+}
+
+section:first-child article {
+  background-image: linear-gradient(-90deg, #fe996b, #ff4f48);
+}
+
+section:last-child article {
+  background-image: linear-gradient(-90deg, #21deda, #468ae1);
+}
+
+span {
+	font-size: 2em;
+	color: #fff;
+	font-family: 'Acme', sans-serif;
+	top: 4px;
+	position: absolute;
+	right: 9px;
+	cursor: pointer;
+}
+
+span:hover {
+	color:#2b2e34
+}
+
+figure {
+  margin: 10px 20px;
+}
+
+img {
+  width: 60px;
+
+  border-radius: 50%;
+}
+
+figcaption {
+  text-transform: capitalize;
+}
+
+figcaption p:first-child {
+  font-weight: 700;
+}
+
+.main {
+  font-family: 'Lato', sans-serif;
+
+  overflow: auto;
+
+  background-color: #2b2e34;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-around;
+}
+
+
+button {
+	outline: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	overflow: visible;
+	background: transparent;
+}
+
+.star {
+	cursor: pointer;
+	position: absolute;
+	top: 48px;
+	left: 100px;
+	fill: yellow;
 }

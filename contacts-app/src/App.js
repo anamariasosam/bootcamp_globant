@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+import ContactsList from './ContactsList'
 
 class App extends Component {
   constructor(props) {
@@ -25,8 +26,7 @@ class App extends Component {
 	}
 	
 	toggleFavorites(list) {
-		console.log(list)
-		const removeFrom = list === 'favorites' ? 'contacts' : 'favorites'
+		const lisToToRemove = list === 'favorites' ? 'contacts' : 'favorites'
 
 		return (contact) => {
 			const items = this.state[list].concat(contact)
@@ -37,7 +37,7 @@ class App extends Component {
 				}
 			})
 
-			this.removeContactCard(removeFrom)(contact.email)
+			this.removeContactCard(lisToToRemove)(contact.email)
 		}
 	}
 
@@ -57,53 +57,28 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <ContactsList
-          contacts={this.state.contacts}
-          title="Contacts"
-          removeContactCard={this.removeContactCard('contacts')}
-          toggleFavorites={this.toggleFavorites('favorites')}
-        />
-				<ContactsList 
-					contacts={this.state.favorites} 
-					title="Favorites" 
-					removeContactCard={this.removeContactCard('favorites')}
-					toggleFavorites={this.toggleFavorites('contacts')}
-				/>
+			<div className="main">
+				<header>
+					<h1>Contacts App</h1>
+				</header>
+				<div className="container">
+					<ContactsList
+						contacts={this.state.contacts}
+						title="Contacts"
+						removeContactCard={this.removeContactCard('contacts')}
+						toggleFavorites={this.toggleFavorites('favorites')}
+					/>
+					<ContactsList 
+						contacts={this.state.favorites} 
+						title="Favorites" 
+						removeContactCard={this.removeContactCard('favorites')}
+						toggleFavorites={this.toggleFavorites('contacts')}
+					/>
+				</div>
       </div>
     )
   }
 }
 
-const ContactsList = props => {
-  return (
-		<div>
-			<h2>{props.title}</h2>
-      {props.contacts.map(contact => (
-        <ContactCard
-          contact={contact}
-          key={contact.email}
-          removeContactCard={() => props.removeContactCard(contact.email)}
-          toggleFavorites={() => props.toggleFavorites(contact)}
-        />
-      ))}
-    </div>
-  )
-}
-
-class ContactCard extends Component {
-  render() {
-    return (
-      <div>
-        <figure>
-          <img src={this.props.contact.picture.large} alt="author" />
-          <figcaption>{this.props.contact.name.first}</figcaption>
-        </figure>
-        <button onClick={this.props.toggleFavorites}>Favorito</button>
-        <button onClick={this.props.removeContactCard}>Remover</button>
-      </div>
-    )
-  }
-}
 
 export default App
