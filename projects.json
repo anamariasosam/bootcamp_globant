@@ -71,10 +71,4 @@
 		"demoUrl": "https://contactsapp.surge.sh/",
 		"imgUrl": "images/poster.png"
 	},
-	{
-		"name": "Calculator",
-		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/calculator-js",
-		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/calculator-js/",
-		"imgUrl": "images/poster.png"
-	}
 ]
