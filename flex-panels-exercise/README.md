@@ -1,3 +1,3 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/anamariasosa/pen/oaNLXG.
+# Flex Box Panels
 
- Practice with CSS flexbox and vanilla JS. Challenge from Wes Bos' JavaScript30 course.
+![demo png](https://github.com/anamariasosam/bootcamp_globant/blob/master/images/flexBox.png?raw=true)
