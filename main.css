@@ -1,0 +1,64 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+p {
+	font-weight: 700;
+	margin: 0;
+	color: #000;
+}
+
+figure {
+	margin: 10px;
+}
+
+img {
+	max-width: 300px;
+	border-radius: 11px;
+}
+
+h1 {
+	font-family: 'Mali', cursive;
+	text-align: center;
+}
+
+a {
+	padding: 5px 15px;
+	border-radius: 50px;
+	text-decoration: none;
+	margin: 10px;
+	display: inline-block;
+	color: #fff;
+	background-color: #84DCC6;
+}
+
+a:last-child {
+	background-color: #FFA69E;
+}
+
+
+main {
+	background-color: #FF505D;
+	overflow: auto;
+	padding-bottom: 30vh;
+	color: #fff;
+}
+
+
+article {
+	background-color: #fff;
+	margin: 10px;
+	border-radius: 10px;
+	box-shadow: 11px 9px 20px rgba(132, 220, 198, 0.4);
+}
+
