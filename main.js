@@ -12,14 +12,14 @@ projectsData.then(projects => {
   const section = document.querySelector('section')
 	
 
-  projects.forEach(project => {
-    const article = createProject(project)
+  projects.forEach((project, index) => {
+    const article = createProject(project, index + 1)
 
     section.append(article)
   })
 })
 
-createProject = project => {
+createProject = (project, index) => {
 	const { name, repoUrl, demoUrl, imgUrl } = project
 	
   const article = document.createElement('article')
@@ -30,7 +30,7 @@ createProject = project => {
   const projectDemoLink = document.createElement('a')
   const projectImage = document.createElement('img')
 
-  projectName.innerHTML = name
+  projectName.innerHTML = `${index}. ${name}`
   projectRepoLink.innerHTML = 'Ver Repo'
   projectDemoLink.innerHTML = 'Ver Demo'
   projectRepoLink.href = repoUrl

@@ -9,6 +9,72 @@
 		"name": "Magazine Cover",
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/magazine-cover",
 		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/magazine-cover/",
-		"imgUrl": "images/cover.png"
+		"imgUrl": "images/poster.png"
+	},
+	{
+		"name": "Blog Layout",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/blog-theme",
+		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/blog-theme/",
+		"imgUrl": "images/poster.png"
+	},
+	{
+		"name": "Win10 Start Menu",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/win10-start-menu-base",
+		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/win10-start-menu-base/",
+		"imgUrl": "images/poster.png"
+	},
+	{
+		"name": "Flexbox panels",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/flex-panels-exercise",
+		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/flex-panels-exercise/",
+		"imgUrl": "images/poster.png"
+	},
+	{
+		"name": "Super Mario",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/mario-bros",
+		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/mario-bros/",
+		"imgUrl": "images/poster.png"
+	},
+	{
+		"name": "Skeleton landing",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/skeleton-landing",
+		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/skeleton-landing/",
+		"imgUrl": "images/poster.png"
+	},
+	{
+		"name": "Blog responsive",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/blog-theme",
+		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/blog-theme/",
+		"imgUrl": "images/poster.png"
+	},
+	{
+		"name": "Party",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/party-js",
+		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/party-js/",
+		"imgUrl": "images/poster.png"
+	},
+	{
+		"name": "Contact list",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/authors-js",
+		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/authors-js/",
+		"imgUrl": "images/poster.png"
+	},
+	{
+		"name": "Prototype & Classes",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/prototype",
+		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/prototype/",
+		"imgUrl": "images/poster.png"
+	},
+	{
+		"name": "Contact list - React",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/contacts-app",
+		"demoUrl": "https://contactsapp.surge.sh/",
+		"imgUrl": "images/poster.png"
+	},
+	{
+		"name": "Calculator",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/calculator-js",
+		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/calculator-js/",
+		"imgUrl": "images/poster.png"
 	}
 ]
