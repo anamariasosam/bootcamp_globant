@@ -1,8 +1,14 @@
 [
 	{
 		"name": "Poster",
-		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/poster/",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/poster",
 		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/poster/",
 		"imgUrl": "images/poster.png"
+	},
+	{
+		"name": "Magazine Cover",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/magazine-cover",
+		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/magazine-cover/",
+		"imgUrl": "images/cover.png"
 	}
 ]

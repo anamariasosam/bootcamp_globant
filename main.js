@@ -1,90 +1,51 @@
-// let request = fetch('https://randomuser.me/api/?results=10')
+let request = fetch('https://raw.githubusercontent.com/anamariasosam/bootcamp_globant/master/projects.json')
 
-// let authorsData = request
-//   .then(res => {
-//     return res.json()
-//   })
-//   .catch(err => {
-//     console.log('ups', err)
-//   })
+let projectsData = request
+  .then(res => {
+    return res.json()
+  })
+  .catch(err => {
+    console.log('ups', err)
+  })
 
-// authorsData.then(data => {
-//   const section = document.querySelector('section')
-//   const authors = data.results
+projectsData.then(projects => {
+  const section = document.querySelector('section')
+	
 
-//   authors.forEach(author => {
-//     console.log(author)
-//     const name = `${author.name.first} ${author.name.last}`
-//     const image = author.picture.large
-//     const email = author.email
-//     const location = `${author.location.city}, ${author.location.state}`
-//     const authorData = { name, image, email, location }
+  projects.forEach(project => {
+    const article = createProject(project)
 
-//     const article = createArticle(authorData)
+    section.append(article)
+  })
+})
 
-//     article.addEventListener('click', () => {
-//       removeAuthorFromList(email)
-//       addAuthorToFavorites(authorData)
-//     })
+createProject = project => {
+	const { name, repoUrl, demoUrl, imgUrl } = project
+	
+  const article = document.createElement('article')
+  const figure = document.createElement('figure')
+  const figcaption = document.createElement('figcaption')
+  const projectName = document.createElement('p')
+  const projectRepoLink = document.createElement('a')
+  const projectDemoLink = document.createElement('a')
+  const projectImage = document.createElement('img')
 
-//     section.append(article)
-//   })
-// })
+  projectName.innerHTML = name
+  projectRepoLink.innerHTML = 'Ver Repo'
+  projectDemoLink.innerHTML = 'Ver Demo'
+  projectRepoLink.href = repoUrl
+	projectDemoLink.href = demoUrl
+	projectRepoLink.target = '_blank'
+  projectDemoLink.target = '_blank'
+  projectImage.src = imgUrl
 
-// createArticle = author => {
-//   const { name, image, email, location } = author
-//   const article = document.createElement('article')
-//   const figure = document.createElement('figure')
-//   const authorName = document.createElement('p')
-//   const authorLocation = document.createElement('p')
-//   const figcaption = document.createElement('figcaption')
-//   const authorImg = document.createElement('img')
+  figcaption.append(projectName)
+  figcaption.append(projectRepoLink)
+  figcaption.append(projectDemoLink)
+  figure.append(projectImage)
+  figure.append(figcaption)
 
-//   authorName.innerHTML = name
-//   authorLocation.innerHTML = location
-//   authorImg.src = image
+  article.append(figure)
 
-//   figcaption.append(authorName)
-//   figcaption.append(authorLocation)
-//   figure.append(authorImg)
-//   figure.append(figcaption)
-
-//   article.setAttribute('id', email)
-//   article.append(figure)
-
-//   return article
-// }
-
-// addToOriginalList = author => {
-//   const { name, image, email, location } = author
-
-//   const section = document.querySelector('section')
-//   const article = createArticle(author)
-
-//   article.addEventListener('click', () => {
-//     removeAuthorFromList(email)
-//     addAuthorToFavorites(author)
-//   })
-
-//   section.append(article)
-// }
-
-// addAuthorToFavorites = author => {
-//   const { name, image, email, location } = author
-
-//   const aside = document.querySelector('aside')
-
-//   const article = createArticle(author)
-
-//   article.addEventListener('click', () => {
-//     removeAuthorFromList(email)
-//     addToOriginalList(author)
-//   })
-
-//   aside.append(article)
-// }
-
-// removeAuthorFromList = email => {
-//   var article = document.getElementById(email)
-//   article.remove()
-// }
+  return article
+}
