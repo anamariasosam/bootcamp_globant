@@ -23,62 +23,59 @@ class App extends Component {
           contacts: data.results,
         })
       })
-	}
-	
-	toggleFavorites(list) {
-		const lisToToRemove = list === 'favorites' ? 'contacts' : 'favorites'
+  }
 
-		return (contact) => {
-			const items = this.state[list].concat(contact)
-		
-			this.setState(() => {
-				return {
-					[list] : items
-				}
-			})
+  toggleFavorites(list) {
+    const lisToToRemove = list === 'favorites' ? 'contacts' : 'favorites'
 
-			this.removeContactCard(lisToToRemove)(contact.email)
-		}
-	}
+    return contact => {
+      const items = this.state[list].concat(contact)
+
+      this.setState(() => {
+        return {
+          [list]: items,
+        }
+      })
+
+      this.removeContactCard(lisToToRemove)(contact.email)
+    }
+  }
 
   removeContactCard(list) {
-		return (email) => {
-			const items = this.state[list].filter(
-				contact => contact.email !== email
-			)
-	
-			this.setState(() => {
-				return {
-					[list] : items
-				}
-			})
-		}
+    return email => {
+      const items = this.state[list].filter(contact => contact.email !== email)
+
+      this.setState(() => {
+        return {
+          [list]: items,
+        }
+      })
+    }
   }
 
   render() {
     return (
-			<div className="main">
-				<header>
-					<h1>Contacts App</h1>
-				</header>
-				<div className="container">
-					<ContactsList
-						contacts={this.state.contacts}
-						title="Contacts"
-						removeContactCard={this.removeContactCard('contacts')}
-						toggleFavorites={this.toggleFavorites('favorites')}
-					/>
-					<ContactsList 
-						contacts={this.state.favorites} 
-						title="Favorites" 
-						removeContactCard={this.removeContactCard('favorites')}
-						toggleFavorites={this.toggleFavorites('contacts')}
-					/>
-				</div>
+      <div className="main">
+        <header>
+          <h1>Contacts App</h1>
+        </header>
+        <div className="container">
+          <ContactsList
+            contacts={this.state.contacts}
+            title="Contacts"
+            removeContactCard={this.removeContactCard('contacts')}
+            toggleFavorites={this.toggleFavorites('favorites')}
+          />
+          <ContactsList
+            contacts={this.state.favorites}
+            title="Favorites"
+            removeContactCard={this.removeContactCard('favorites')}
+            toggleFavorites={this.toggleFavorites('contacts')}
+          />
+        </div>
       </div>
     )
   }
 }
-
 
 export default App
