@@ -1,72 +1,85 @@
 [
 	{
 		"name": "Poster",
+		"slug": "poster",
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/poster",
 		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/poster/",
 		"imgUrl": "images/poster.png"
+		
 	},
 	{
 		"name": "Magazine Cover",
+		"slug": "magazine-cover",
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/magazine-cover",
 		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/magazine-cover/",
 		"imgUrl": "images/cover.gif"
 	},
 	{
 		"name": "Blog Layout",
+		"slug": "blog-theme",
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/blog-theme",
 		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/blog-theme/",
 		"imgUrl": "images/blog.gif"
 	},
 	{
 		"name": "Win10 Start Menu",
+		"slug": "win10-start-menu-base",
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/win10-start-menu-base",
 		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/win10-start-menu-base/",
 		"imgUrl": "images/windows.png"
 	},
 	{
 		"name": "Flexbox panels",
+		"slug": "flex-panels-exercise",
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/flex-panels-exercise",
 		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/flex-panels-exercise/",
 		"imgUrl": "images/flexbox.png"
 	},
 	{
 		"name": "Super Mario",
+		"slug": "mario-bros",
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/mario-bros",
 		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/mario-bros/",
 		"imgUrl": "images/mario.gif"
 	},
 	{
 		"name": "Skeleton landing",
+		"slug": "skeleton-landing",
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/skeleton-landing",
 		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/skeleton-landing/",
 		"imgUrl": "images/skeleton.gif"
 	},
 	{
 		"name": "Blog responsive",
+		"slug": "blog-theme",
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/blog-theme",
 		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/blog-theme/",
 		"imgUrl": "images/blogResponsive.gif"
 	},
 	{
 		"name": "Party",
+		"slug": "party-js",
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/party-js",
 		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/party-js/",
 		"imgUrl": "images/party.gif"
 	},
 	{
 		"name": "Contact list",
+		"slug": "authors-js",
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/authors-js",
 		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/authors-js/",
 		"imgUrl": "images/authors.gif"
 	},
 	{
 		"name": "Prototype & Classes",
+		"slug": "prototype",
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/prototype",
 		"demoUrl": "https://anamariasosam.github.io/bootcamp_globant/prototype/",
 		"imgUrl": "images/prototype.png"
 	},
 	{
 		"name": "Contact list - React",
+		"slug": "contacts-app",
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/contacts-app",
 		"demoUrl": "https://contactsapp.surge.sh/",
 		"imgUrl": "images/contactApp.gif"

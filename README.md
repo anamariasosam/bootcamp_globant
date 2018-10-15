@@ -1,4 +1,23 @@
-# Bootcamp globant
+# Bootcamp Globant
+
+![project cli](https://github.com/anamariasosam/bootcamp_globant/blob/master/images/cli.gif?raw=true)
+
+## Steps
+
+### 1. Clone
+```
+https://github.com/anamariasosam/bootcamp_globant.git
+```
+
+### 2. Install dependencies
+```
+npm install
+```
+aw
+### 3. Run CLI
+```
+npm start
+```
 
 |    | Project Name   | Repo Url | Repo Url |
 |----|----------------|----------|----------|
