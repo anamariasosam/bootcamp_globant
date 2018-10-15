@@ -7,8 +7,11 @@ var jsonPath = path.resolve(__dirname, '../projects.json')
 var projects = JSON.parse(fs.readFileSync(jsonPath).toString())
 
 var projectsName = projects.map(function (project) {
+	if (project.slug === 'contacts-app'){
+		return false
+	}
 	return project.name
-})
+}).filter(Boolean)
 
 inquirer
   .prompt([

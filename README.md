@@ -13,7 +13,6 @@ https://github.com/anamariasosam/bootcamp_globant.git
 ```
 npm install
 ```
-aw
 ### 3. Run CLI
 ```
 npm start
