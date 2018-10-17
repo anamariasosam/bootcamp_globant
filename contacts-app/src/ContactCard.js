@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 
 const ContactCard = props => {
   const { toggleFavorites, removeContactCard, contact, listType } = props
@@ -35,6 +37,24 @@ const ContactCard = props => {
       </figure>
     </article>
   )
+}
+
+ContactCard.propTypes = {
+	toggleFavorites: PropTypes.func,
+	removeContactCard: PropTypes.func,
+		contact: PropTypes.shape({
+			picture: PropTypes.PropTypes.shape({ 
+			large: PropTypes.string,
+		}),
+		name: PropTypes.shape({ 
+			first: PropTypes.string,
+		}),
+		location: PropTypes.shape({ 
+			city: PropTypes.string,
+			state: PropTypes.string,
+		}),
+	}),
+	listType: PropTypes.string,
 }
 
 export default ContactCard

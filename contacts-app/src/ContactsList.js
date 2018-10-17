@@ -1,5 +1,6 @@
 import React from 'react'
 import ContactCard from './ContactCard'
+import PropTypes from 'prop-types'
 
 const ContactsList = props => {
   const { title, contacts, removeContactCard, toggleFavorites } = props
@@ -19,4 +20,13 @@ const ContactsList = props => {
   )
 }
 
+ContactsList.propTypes = {
+	title: PropTypes.string.isRequired,
+	contact: PropTypes.object.isRequired,
+	toggleFavorites: PropTypes.func.isRequired,
+}
+
+ContactsList.defaultProps = {
+	contact: {}
+}
 export default ContactsList
