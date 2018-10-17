@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 const ContactCard = props => {
   const { toggleFavorites, removeContactCard, contact, listType } = props
@@ -32,6 +33,15 @@ const ContactCard = props => {
           <p>
             {location.city}, {location.state}
           </p>
+          <Link
+            to={{
+              pathname: '/contact/' + contact.name.first,
+              state: { contact },
+            }}
+            className="contact--link"
+          >
+            Show more
+          </Link>
         </figcaption>
       </figure>
     </article>

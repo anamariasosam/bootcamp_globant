@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import '../styles/Agenda.css'
 import ContactsList from '../components/ContactsList'
 
@@ -55,7 +55,7 @@ class ContactScreen extends Component {
 
   render() {
     return (
-      <div className="main">
+      <Fragment>
         <header>
           <h1>Contacts App</h1>
         </header>
@@ -73,7 +73,7 @@ class ContactScreen extends Component {
             toggleFavorites={this.toggleFavorites('contacts')}
           />
         </div>
-      </div>
+      </Fragment>
     )
   }
 }
