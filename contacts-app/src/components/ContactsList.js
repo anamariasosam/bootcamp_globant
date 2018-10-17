@@ -21,12 +21,12 @@ const ContactsList = props => {
 }
 
 ContactsList.propTypes = {
-	title: PropTypes.string.isRequired,
-	contact: PropTypes.object.isRequired,
-	toggleFavorites: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  contact: PropTypes.object.isRequired,
+  toggleFavorites: PropTypes.func.isRequired,
 }
 
 ContactsList.defaultProps = {
-	contact: {}
+  contact: {},
 }
 export default ContactsList

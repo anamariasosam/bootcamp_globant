@@ -1,81 +1,19 @@
-import React, { Component } from 'react'
-import './App.css'
-import ContactsList from './ContactsList'
+import React, { Fragment } from 'react'
+import Menu from './components/Menu'
+import { BrowserRouter, Route} from 'react-router-dom'
+import Home from './screens/Home'
+import Agenda from './screens/Agenda'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      contacts: [],
-      favorites: [],
-    }
-
-    this.removeContactCard = this.removeContactCard.bind(this)
-    this.toggleFavorites = this.toggleFavorites.bind(this)
-  }
-
-  componentDidMount() {
-    fetch('https://randomuser.me/api/?results=10')
-      .then(result => result.json())
-      .then(data => {
-        this.setState({
-          contacts: data.results,
-        })
-      })
-  }
-
-  toggleFavorites(list) {
-    const lisToToRemove = list === 'favorites' ? 'contacts' : 'favorites'
-
-    return contact => {
-      const items = this.state[list].concat(contact)
-
-      this.setState(() => {
-        return {
-          [list]: items,
-        }
-      })
-
-      this.removeContactCard(lisToToRemove)(contact.email)
-    }
-  }
-
-  removeContactCard(list) {
-    return email => {
-      const items = this.state[list].filter(contact => contact.email !== email)
-
-      this.setState(() => {
-        return {
-          [list]: items,
-        }
-      })
-    }
-  }
-
-  render() {
-    return (
-      <div className="main">
-        <header>
-          <h1>Contacts App</h1>
-        </header>
-        <div className="container">
-          <ContactsList
-            contacts={this.state.contacts}
-            title="Contacts"
-            removeContactCard={this.removeContactCard('contacts')}
-            toggleFavorites={this.toggleFavorites('favorites')}
-          />
-          <ContactsList
-            contacts={this.state.favorites}
-            title="Favorites"
-            removeContactCard={this.removeContactCard('favorites')}
-            toggleFavorites={this.toggleFavorites('contacts')}
-          />
-        </div>
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Fragment>
+				<Menu />
+				<Route path='/' component={Home} exact/>
+				<Route path='/contacts' component={Agenda} exact/>
+      </Fragment>
+    </BrowserRouter>
+  )
 }
 
 export default App
