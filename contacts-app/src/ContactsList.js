@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ContactCard from './ContactCard'
 
 const ContactsList = props => {
-  const { title, contacts, removeContactCard, toggleFavorites } = props
+  const { title, contacts } = props
   return (
     <section>
       <h2>{title}</h2>
@@ -10,13 +11,17 @@ const ContactsList = props => {
         <ContactCard
           contact={contact}
           key={contact.email}
-          removeContactCard={() => removeContactCard(contact.email)}
-          toggleFavorites={() => toggleFavorites(contact)}
-          listType={title.toLowerCase()}
+					addToFavorites={props.addToFavorites}
         />
       ))}
     </section>
   )
+}
+
+ContactsList.propTypes = {
+	title: PropTypes.string,
+	contact: PropTypes.object,
+	addToFavorites: PropTypes.func,
 }
 
 export default ContactsList

@@ -10,10 +10,22 @@ class App extends Component {
       contacts: [],
       favorites: [],
     }
+		
+		this.addToFavorites = this.addToFavorites.bind(this)
+	}
+	
+	addToFavorites(contact) {
+		const contacts = this.state.contacts.filter(
+			c => c.id.value !== contact.id.value
+		)
 
-    this.removeContactCard = this.removeContactCard.bind(this)
-    this.toggleFavorites = this.toggleFavorites.bind(this)
-  }
+		const favorites = this.state.favorites.concat(contact)
+
+		this.setState({
+			contacts,
+			favorites,
+		})
+	}
 
   componentDidMount() {
     fetch('https://randomuser.me/api/?results=10')
@@ -25,33 +37,7 @@ class App extends Component {
       })
   }
 
-  toggleFavorites(list) {
-    const lisToToRemove = list === 'favorites' ? 'contacts' : 'favorites'
 
-    return contact => {
-      const items = this.state[list].concat(contact)
-
-      this.setState(() => {
-        return {
-          [list]: items,
-        }
-      })
-
-      this.removeContactCard(lisToToRemove)(contact.email)
-    }
-  }
-
-  removeContactCard(list) {
-    return email => {
-      const items = this.state[list].filter(contact => contact.email !== email)
-
-      this.setState(() => {
-        return {
-          [list]: items,
-        }
-      })
-    }
-  }
 
   render() {
     return (
@@ -63,14 +49,14 @@ class App extends Component {
           <ContactsList
             contacts={this.state.contacts}
             title="Contacts"
-            removeContactCard={this.removeContactCard('contacts')}
-            toggleFavorites={this.toggleFavorites('favorites')}
+						addToFavorites={this.addToFavorites}
+						key="1"
           />
           <ContactsList
             contacts={this.state.favorites}
             title="Favorites"
-            removeContactCard={this.removeContactCard('favorites')}
-            toggleFavorites={this.toggleFavorites('contacts')}
+						addToFavorites={this.addToFavorites}
+						key="2"
           />
         </div>
       </div>
