@@ -1,0 +1,48 @@
+button {
+	border: none;
+	margin: 0;
+	margin-left: 50px;
+	padding: 0;
+	width: auto;
+	overflow: visible;
+
+	background: transparent;
+
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+}
+
+.todoInput {
+	box-shadow: none;
+	outline: none;
+	display: block;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	color: #555;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 408px;
+	margin: 0 auto;
+}
+
+.homeLink {
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	margin: 10px 20px;
+	padding: 10px 20px
+}
+
+.homeLink:hover {
+	background-color: #fff;
+	color: #020631;
+}
+
+@media (max-width: 480px) {
+	.todoInput {
+		width: 80%;
+	}
+}

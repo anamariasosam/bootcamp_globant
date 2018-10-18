@@ -1,0 +1,27 @@
+ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+li {
+	list-style: none;
+	background-color: #fff;
+	margin: 20px;
+	text-align: center;
+	padding: 10px;
+	color: #333;
+}
+
+li span {
+	display: block;
+}
+
+li a {
+	text-decoration: none;
+	color: inherit;
+}
