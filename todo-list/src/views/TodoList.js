@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 import TasksList from '../components/TasksList'
 import '../styles/TodoList.css'
+import { categories } from '../data/data'
 
 export default class TodoList extends Component {
   constructor(props) {
     super(props)
 
-    const { name, image } = this.props.location.state.category
+    const { name, image } = this.getCategory()
     this.state = {
       name,
       image,
@@ -20,7 +21,19 @@ export default class TodoList extends Component {
     this.addTask = debounce(this.addTask, 1000)
     this.removeTask = this.removeTask.bind(this)
     this.saveTask = this.saveTask.bind(this)
-  }
+	}
+	
+	getCategory() {
+		if (this.props.location.state) {
+			return this.props.location.state.category
+		} 
+		else {
+			const name = this.props.match.params.categoryName
+			const category = categories.filter(c => c.name.toLowerCase() === name)
+		
+			return category[0]
+		}
+	}
 
   getTasks() {
     if (localStorage.hasOwnProperty(this.state['name'])) {
