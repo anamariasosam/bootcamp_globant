@@ -17,7 +17,7 @@ export default class TodoList extends Component {
       task: '',
     }
 
-    this.addTask = debounce(this.addTask, 700)
+    this.addTask = debounce(this.addTask, 1000)
     this.removeTask = this.removeTask.bind(this)
     this.saveTask = this.saveTask.bind(this)
   }
@@ -82,7 +82,8 @@ export default class TodoList extends Component {
         </Link>
         <Header image={image} title={name} />
         <div>
-          <input
+					<input
+						autoFocus={true}
             type="text"
             className="todoInput"
             placeholder="✍️ Add a task..."

@@ -16,8 +16,8 @@ export const categories = [
 		image: require('../images/house.png')
 	},
 	{
-		name: "Doctor",
-		image: require('../images/doctor.png')
+		name: "Health",
+		image: require('../images/health.png')
 	},
 	{
 		name: "Others",
