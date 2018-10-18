@@ -1,0 +1,8 @@
+.main {
+	height: 80vh;	
+	background-image: linear-gradient(180deg, #020631, 	#414cc1);
+	color: #fff;
+	font-family: 'Nunito', sans-serif;
+	overflow: auto;
+	padding-bottom: 20vh;
+}
