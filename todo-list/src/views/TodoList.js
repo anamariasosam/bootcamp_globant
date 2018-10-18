@@ -24,11 +24,13 @@ export default class TodoList extends Component {
 
   getTasks() {
     if (localStorage.hasOwnProperty(this.state['name'])) {
-      const tasks = localStorage.getItem(this.state['name']).split(',')
+      let tasks = localStorage.getItem(this.state['name']).split(',')
+			
+			tasks = tasks.filter(task => (task !== ""))
 
-      this.setState({
-        tasks,
-      })
+			this.setState({
+				tasks,
+			})
     }
   }
 
@@ -45,9 +47,7 @@ export default class TodoList extends Component {
   }
 
   saveTask() {
-    if (this.state.tasks.length) {
-      localStorage.setItem(this.state['name'], this.state.tasks)
-    }
+    localStorage.setItem(this.state['name'], this.state.tasks)
   }
 
   addTask(task) {
