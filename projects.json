@@ -83,5 +83,12 @@
 		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/contacts-app",
 		"demoUrl": "https://contactsapp.surge.sh/",
 		"imgUrl": "images/contactApp.gif"
+	},
+	{
+		"name": "ToDo list - React",
+		"slug": "todo-list",
+		"repoUrl": "https://github.com/anamariasosam/bootcamp_globant/tree/master/todo-list",
+		"demoUrl": "https://emojitodo.surge.sh/",
+		"imgUrl": "images/todo.gif"
 	}
 ]

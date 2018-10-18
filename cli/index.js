@@ -7,7 +7,7 @@ var jsonPath = path.resolve(__dirname, '../projects.json')
 var projects = JSON.parse(fs.readFileSync(jsonPath).toString())
 
 var projectsName = projects.map(function (project) {
-	if (project.slug === 'contacts-app'){
+	if (project.slug === 'contacts-app' || project.slug === 'todo-list'){
 		return false
 	}
 	return project.name
